@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Chapter 08: Forms</title>
+</head>
+<body>
+    <h1>Chapter 8: Forms</h1>
+    <h2>Form Practice</h2>
+    <form name='search' action='/search'>
+        <input name='searchInput'>
+        <button type='submit'>Search</button>
+    </form>
+    <h2>Notes</h2>
+    <ul>
+        <li>In actual practice, you need to keep web accessability in mind when designing forms.</li>
+        <li>Ways to access a form element:
+            <ol>
+                <li>"const form = document.forms['search'];"</li>
+                <li>"const [input,button] = form.elements;"</li>
+                <li>"const input = form.searchInput"</li>
+                <li>"const input = form['searchInput']"</li>
+            </ol>
+        </li>
+        <li>The form.reset() method will reset all the form controls back to their initial values specified in the HTML.</li>
+        <li>Won't usually use form.reset, probably why I have never seen it used.</li>
+        <li>We can mimic the placeholder functionality using JavaScript, but it's better to just use placeholder.</li>
+        <li>Hidden Input fields are great when needing to submit multiple items.</li>
+        <li>Did not work on Hero Quiz in this chapter, focused on basics.</li>
+    </ul>
+</body>
+<script src="../js/first-event.js"></script>
+</html>

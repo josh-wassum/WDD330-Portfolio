@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Chapter 12: OOP</title>
+</head>
+<body>
+    <h1>Chapter 12: OOP</h1>
+    <ul>
+        <li>3 main ideas in OOP: encapsulation, polymorphism, and inheritance</li>
+        <li>JavaScript did not have classes before ES6</li>
+        <li>See notes and javascript code for some notes.</li>
+        <li>Built in Constructor functions: 
+            <ol>
+                <li>Object</li>
+                <li>Array</li>
+                <li>Function</li>
+            </ol>
+        </li>
+        <li>By convention we capitalize the name of constructor functions</li>
+        <li>All objects have a constructor property that returns the constructor function that created it</li>
+        <li>A static method is called by the class directly rather than by instances of the class.</li>
+        <li>This means that every class has a prototype property that is shared by every instance of the class.</li>
+        <li>When creating a class, you would normally add any default properties and methods to the class declaration. But what if you want to augment the class with extra methods and properties after it has been created? It turns out that you can still do this using the prototype property of the class. This is particularly useful if you don't have access to the class declaration, but still want to add properties and methods to the class.</li>
+        <li>The prototype object is live, so if a new property or method is added to the prototype, any instances of its class will inherit the new properties and methods automatically, even if that instance has already been created. </li>
+        <li>The prototype can be used to add any new properties and methods after the class has been declared. It should be used to define any properties that will remain the same for every instance of the class. </li>
+        <li>By default, an object’s methods are public in JavaScript. Methods and properties are said to be public because they can be queried directly and changed by assignment. </li>
+        <li>Properties of objects in JavaScript are said to be enumerable or non-enumerable. If they aren't enumerable, this means they will not show up when a for-in loop is used to loop through an object’s properties and methods.</li>
+        <li>The concept of polymorphism means that different objects can have the same method, but implement it in different ways. </li>
+        <li>It is possible to add more methods to the prototype of JavaScript’s built-in objects — such as Number, String, and Array — to add more functionality. This practice is known as monkey-patching, but it’s mostly frowned upon in the JavaScript community</li>
+        <li> It turns out that each property has a number of attributes that provide information about the property. These attributes are stored in a property descriptor, which is an object that contains values of each attribute.</li>
+        <li>An object property descriptor can have get() and set() methods instead of a value attribute. All objects must have one or the other, they can't have both.</li>
+        <li>It’s possible to avoid using classes altogether, and create new objects based on another object that acts as a 'blueprint' or prototype instead.</li>
+        <li>A mixin is a way of adding properties and methods of some objects to another object without using inheritance.</li>
+        <li>Did not update quiz as part of this chapter. Focused on notes and in chapter exercises.</li>
+    </ul>
+</body>
+<script src="../js/second-event.js"></script>
+</html>
