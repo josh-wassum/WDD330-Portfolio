@@ -1,0 +1,59 @@
+body{
+    justify-content: center;
+}
+main{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+.flexbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+#todo-wrapper{
+    width: 50%;
+    margin: auto;
+    padding-right: 3.2em;
+}
+#todo-wrapper li {
+    list-style: none;
+    width: 100%;
+
+}
+#todo-wrapper li label{
+    width: 85%;
+    display: inline-block;
+}
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+
+.app-footer {
+    background-color: #fff;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding: 0.25rem;
+    align-items: center;
+    margin: auto;
+}
+
+li {
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    padding: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#new-todo {
+    width:75%;
+}
