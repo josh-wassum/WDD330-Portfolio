@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Chapter 11: Further Functions</title>
+</head>
+<body>
+    <h1>Chapter 11: Further Functions</h1>
+    <h2>Notes</h2>
+    <ul>
+        <li>
+            The call() method can be used to set the value of this inside a function to an object that is provided as the first argument.
+        </li>
+        <li>
+            If a function doesn’t refer to an object as this in its body, it can still be called using the call() method, but you need provide null as its first argument.
+        </li>
+        <li>
+            There is nothing to stop you adding your own properties to functions in the same way that you can add properties to any object in JavaScript.
+        </li>
+        <li>
+            If a function takes some time to compute a return value, we can save the result in a cache property.
+        </li>
+        <li>
+            An Immediately Invoked Function Expression – or IIFE – (pronounced 'iffy') is an anonymous function that, as the name suggests, is invoked as soon as it’s defined. 
+        </li>
+        <li>
+            An IIFE can be used to set up any initialization code that there’ll be no need for again. Because the code is only run once, there’s no need to create any reusable, named functions, and all the variables will also be temporary. 
+        </li>
+        <li>
+            In the last chapter we discussed using strict mode to avoid any sloppy coding practices. One of the problems with simply placing 'use strict' at the beginning of a file is that it will enforce strict mode on all the JavaScript in the file, and if you’re using other people’s code, there’s no guarantee that they’ve coded in strict mode.
+
+            To avoid this, the recommended way to use strict mode is to place all your code inside an IIFE
+        </li>
+        <li>
+            The dynamic nature of JavaScript means that a function is able to not only call itself, but define itself, and even redefine itself. This is done by assigning an anonymous function to a variable that has the same name as the function.
+        </li>
+        <li>
+            A recursive function is one that invokes itself until a certain condition is met.
+        </li>
+        <li>
+            Callbacks can be used to facilitate event-driven asynchronous programming. 
+        </li>
+        <li>
+            Remember, though, that JavaScript is still single-threaded, so only one task can happen at once. 
+        </li>
+        <li>
+            The increase in the use of asynchronous programming in JavaScript has meant that more and more callbacks are being used. This can result in messy and confusing 'spaghetti code'.
+        </li>
+        <li>
+            Promises don't do anything that can't already be achieved using callbacks, but they help simplify the process, and avoid the convoluted code that can result from using multiple callbacks.
+        </li>
+        <li>
+            Promises come into their own when multiple asynchronous tasks are required to be carried out one after the other. If each function that performs an asynchronous operation returns a promise, we can chain the then() methods together to form a sequential piece of code that’s easy to read.
+        </li>
+        <li>
+            One of the key principles in creating closures is that an 'inner' function, which is declared inside another function, has full access to all of the variables declared inside the scope of the function in which it’s declared (the 'outer' function). 
+        </li>
+        <li>
+            A closure is formed when the inner function is returned by the outer function, maintaining access to any variables declared inside the enclosing function.
+        </li>
+        <li>
+            
+        </li>
+    </ul>
+</body>
+<script src="../js/first-event.js"></script>
+</html>
