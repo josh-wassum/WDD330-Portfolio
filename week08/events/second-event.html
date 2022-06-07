@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Chapter 12: Canvas, SVG, Drag and Drop</title>
+</head>
+<body>
+    <h1>Chapter 12: Canvas, SVG, Drag and Drop</h1>
+    <h2>Notes</h2>
+    <ul>
+        <li>
+            With HTML5’s Canvas API, we can draw anything we can imagine, all through JavaScript. This can improve the performance of our websites by avoiding the need to download images off the network. 
+        </li>
+        <li>
+            The text in between the canvas tags will only be shown if the canvas element is not supported by the visitor’s browser.
+        </li>
+        <li>
+            All drawing on the canvas happens via the Canvas JavaScript API.
+        </li>
+        <li>
+            We can use any CSS color value to set the stroke or fill color, as long as we specify it as a string: a hexadecimal value such as #00FFFF, a color name such as red or blue, or an RGB value such as rgb(0, 0, 255).
+        </li>
+        <li>
+            But now, we’ll draw a rectangle. We can do this by calling the fillRect and strokeRect methods.
+        </li>
+        <li>
+            Instead of a color as our fillStyle, we could have used a CanvasGradient or a CanvasPattern object.
+        </li>
+        <li>
+            Setting the src attribute will tell the browser to start downloading the image.
+        </li>
+        <li>
+            We’re not limited to drawing rectangles—we can draw any shape we can imagine! Unlike rectangles and squares, however, there’s no built-in method for drawing circles or other shapes. To draw more interesting shapes, we must first lay out the path of the shape.
+        </li>
+        <li>
+            With more complex shapes, we need to take three steps: layout the path, stroke the path, and fill the path
+        </li>
+        <li>
+            f we create an image programmatically using the Canvas API, but decide we’d like to have a local copy of our drawing, we can use the API’s toDataURL method to save our drawing. 
+        </li>
+        <li>
+            Once we’ve drawn an image on the canvas, we can use the getImageData method from the Canvas API to manipulate the pixels of that image. 
+        </li>
+        <li>
+            A major downside of canvas in its current form is its lack of accessibility. The canvas doesn’t create a DOM node, is not a text-based format, and is thus essentially invisible to tools such as screen readers.
+        </li>
+        <li>
+            Drawing a circle in SVG is arguably easier than drawing a circle with canvas.
+        </li>
+        <li>
+            To save ourselves some work (and sanity), instead of creating SVG images by hand, we can use an image editor to help.
+        </li>
+        <li>
+            DataTransfer objects are one type of object outlined in the Drag and Drop API. 
+        </li>
+    </ul>
+</body>
+<script src="../js/second-event.js"></script>
+</html>
