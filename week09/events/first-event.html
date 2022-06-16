@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Chapter 9: The Window Object</title>
+</head>
+<body>
+    <h1>Chapter 9: The Window Object</h1>
+    <h2>Notes</h2>
+    <ul>
+        <li>
+            In a browser environment the global object is the window object
+        </li>
+        <li>
+            The Browser Object Model (or BOM for short) is a collection of properties and methods that contain information about the browser and computer screen.
+        </li>
+        <li>
+            In general, you should refer to global variables without using the window object; it’s less typing and your code will be more portable between environments.
+        </li>
+        <li>
+            The window object has a navigator property that returns a reference to the Navigator object. The Navigator object contains information about the browser being used.
+        </li>
+        <li>
+            The window.location property is an object that contains information about the URL of the current page. It contains a number of properties that provide information about different fragments of the URL.
+        </li>
+        <li>
+            The port property returns a string describing the port number, although it will return an empty string if the port is not explicitly stated in the URL
+        </li>
+        <li>
+            The window.history property can be used to access information about any previously visited pages in the current browser session. (Creepy)
+        </li>
+        <li>
+            The window.screen object contains information about the screen the browser is displayed on.
+        </li>
+        <li>
+            To create a cookie, you assign it to JavaScript’s “cookie jar”, using the document.cookie property
+        </li>
+        <li>
+            By default, cookies can only be read by pages inside the same directory and domain as the file was set. This is for security reasons so that access to the cookie is limited.
+        </li>
+        <li>
+            Adding the string ; secure to the end of a cookie will ensure it’s only transmitted over a secure HTTPS network
+        </li>
+        <li>
+            
+        </li>
+    </ul>
+</body>
+<script src="../js/first-event.js"></script>
+</html>

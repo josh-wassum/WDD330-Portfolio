@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Chapter 14: HTML5 APIs</title>
+</head>
+<body>
+    <h1>Chapter 14: HTML5 APIs</h1>
+    <h2>Notes</h2>
+    <ul>
+        <li>
+            The data- attribute is a way of embedding data in a web page using custom attributes that are ignored by the browser.
+        </li>
+        <li>
+            The information contained in the attributes can be used to identify particular elements.
+        </li>
+        <li>
+            For example, all the elements with an attribute of data-dropdown could be identified as dropdown menu. 
+        </li>
+        <li>
+            The HTML5 specification contains a number of APIs that help to gain access to hardware, such as cameras, batteries, geolocation, and the graphics card.
+        </li>
+        <li>
+            However, due to the ever-changing nature of most APIs, it’s still best practice to use feature detection before using any of the API methods.
+        </li>
+        <li>
+            If a browser supports the Web Storage API, the window object will have a property called localStorage, which is a native object with a number of properties and methods used to store data.
+        </li>
+        <li>
+            Rather than using the getItem() and setItem() methods, assignment can be used instead. In the next example, we simply reference localStorage.name as if it was a variable to change its value
+        </li>
+        <li>
+            The fact that only strings can be saved might seem like a restriction at first, but by using JSON, we can store any JavaScript object in local storage.
+        </li>
+        <li>
+            The Geolocation API is used to obtain the geographical position of the device. This means it can be used to find the user’s exact location, then link to nearby places or measure the speed at which the user is moving. 
+        </li>
+        <li>
+            Because of privacy concerns, permission to use this has to be granted by the user first. (Good)
+        </li>
+        <li>
+            As we saw in the last chapter, the main form of communication on the web has always been the HTTP protocol. This uses a system of request and response to send data back and forth. A problem with this method of communication is when you only get a response when a request is sent. But what if the response comes later?
+        </li>
+        <li>
+            Websocket is a new protocol that allows two-way communication with a server – also known as push messaging.
+        </li>
+        <li>
+            The Notification API allows you to show messages using the system's notifications. 
+        </li>
+        <li>
+            
+        </li>
+    </ul>
+</body>
+<script src="../js/second-event.js"></script>
+</html>
