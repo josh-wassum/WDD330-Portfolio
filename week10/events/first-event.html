@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css" />
+    <title>MDN: Validating Forms</title>
+</head>
+<body>
+    <h1>MDN: Validating Forms</h1>
+    <h2>Notes</h2>
+    <ul>
+        <li>
+            However, client-side validation should not be considered an exhaustive security measure! Your apps should always perform security checks on any form-submitted data on the server-side as well as the client-side, because client-side validation is too easy to bypass.
+        </li>
+        <li>
+            Validation done in the browser is called client-side validation, while validation done on the server is called server-side validation. In this chapter we are focusing on client-side validation.
+        </li>
+        <li>
+            Never trust data passed to your server from the client. Even if your form is validating correctly and preventing malformed input on the client-side, a malicious user can still alter the network request.
+        </li>
+        <li>
+            Customizing these error messages is one of the most common use cases of the constraint validation API.
+        </li>
+        <li>
+            A key point here is that setting the novalidate attribute on the form is what stops the form from showing its own error message bubbles, and allows us to instead display the custom error messages in the DOM in some manner of our own choosing.
+        </li>
+        <li>
+            Client-side form validation sometimes requires JavaScript if you want to customize styling and error messages, but it always requires you to think carefully about the user.
+        </li>
+        <li>
+            Honestly, this section was more of a refresher. We did a lot of client and server side validation in backend 1.
+        </li>
+    </ul>
+</body>
+<script src="../js/first-event.js"></script>
+</html>
