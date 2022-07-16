@@ -1,6 +1,6 @@
 export default class Canvas{
     constructor(elementId){
-        this.canvas = document.querySelector('#canvas');
+        this.canvas = document.querySelector(elementId);
         this.canvas.height = 600;
         this.canvas.width = window.innerWidth - 60;
 
@@ -17,74 +17,60 @@ export default class Canvas{
         this.undo_array = [];
         this.undo_index = -1;
         this.redo_index = -1;
-
-        this.canvas.addEventListener("touchstart", this.start, false);
-        this.canvas.addEventListener("touchmove", this.draw, false);
-        this.canvas.addEventListener("mousedown", this.start, false);
-        this.canvas.addEventListener("mousemove", this.draw, false);
-        this.canvas.addEventListener("touchend", this.stop, false);
-        this.canvas.addEventListener("mouseout", this.stop, false);
-        this.canvas.addEventListener("mouseup", this.stop, false);
     }
 
-    start(event) {
-        console.log(this.context)
+    async start(event){
         this.is_drawing = true;
         this.context.beginPath();
         this.context.moveTo(event.clientX - this.canvas.offsetLeft, 
                     event.clientY - this.canvas.offsetTop);
-                    event.preventDefault();
     }
-    
-    draw(event) {
+
+    async draw(event) {
         if (this.is_drawing) {
             this.context.lineTo(event.clientX - this.canvas.offsetLeft, 
-                event.clientY - this.canvas.offsetTop);
+            event.clientY - this.canvas.offsetTop);
             this.context.strokeStyle = this.draw_color;
-    
             this.context.strokeStyle = this.draw_color;
             this.context.lineWidth = this.draw_width;
             this.context.lineCap = 'round';
             this.context.lineJoin = "round";
             this.context.stroke();
         }
-        event.preventDefault();
     }
-    
-    stop(event) {
+
+    async stop(event){
         if (this.is_drawing) {
             this.context.stroke();
             this.context.closePath();
             this.is_drawing = false;
         }
-        event.preventDefault();
         if(event.type != 'mouseout'){
             this.undo_array.push(this.context.getImageData(0, 0, this.canvas.width, this.canvas.height));
             this.undo_index += 1;
         }
     }
-    
-    clear_canvas() {
+
+    async clear_canvas() {
         this.context.fillStyle = this.start_background_color;
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.context.fillRect(0,0,this.canvas.width, this.canvas.height);
-    
         this.undo_index = -1;
         this.undo_array = [];
     }
     
-    undo_last(){
+    async undo_last(){
         if(this.undo_index <= 0) {
             this.clear_canvas();
         }else{
             this.undo_index -= 1;
             this.restore_array.push(this.undo_array.pop());
             this.redo_index += 1;
-            context.putImageData(this.undo_array[this.undo_index], 0, 0);
+            this.context.putImageData(this.undo_array[this.undo_index], 0, 0);
         }
     }
     
-    redo_last(){
+    async redo_last(){
         if(this.redo_index < 0) {
             this.restore_array = [];
             this.redo_index = -1;
@@ -97,11 +83,19 @@ export default class Canvas{
         }
     }
     
-    save_image() {
+    async save_image() {
         const link = document.createElement('a');
         link.download = 'download.png';
         link.href = this.canvas.toDataURL();
         link.click();
         link.delete;
     }
+}
+
+export function clear_canvas(canvas) {
+    canvas.context.fillStyle = canvas.start_background_color;
+    canvas.context.clearRect(0, 0, canvas.canvas.width, canvas.canvas.height);
+    canvas.context.fillRect(0,0,canvas.canvas.width, canvas.canvas.height);
+    canvas.undo_index = -1;
+    canvas.undo_array = [];
 }
